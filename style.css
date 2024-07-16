@@ -8,6 +8,7 @@
 body {
     background: skyblue;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 #header {
@@ -15,7 +16,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +26,7 @@ body {
 #header .logo {
     color: #fff;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1.5em;
     text-decoration: none;
 }
 
@@ -33,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 #header ul li {
@@ -48,7 +49,7 @@ body {
 }
 
 #header ul li a:hover,
-#header ul ii a.active {
+#header ul li a.active {
     background: black;
 }
 
@@ -57,8 +58,10 @@ section {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 section img#house {
@@ -83,26 +86,125 @@ section img {
     left: -150px;
     color: #fff;
     z-index: 1;
-    font-size: 8em;
+    font-size: 6em;
     font-weight: 900;
     white-space: nowrap;
     text-transform: uppercase;
     -webkit-text-stroke: 4px black;
 }
 
+#subtxt {
+    /* color: #808080; */
+    z-index: 1;
+    font-size: 1.6em;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    margin-right: 30%;
+    margin-top: 11%;
+    color: #ffff;
+    white-space: nowrap;
+    -webkit-text-stroke: 1.5px black;
+}
+
 .sec {
     position: relative;
-    padding: 100px;
+    padding: 50px;
     background: skyblue;
     box-shadow: 0 0 0 2px skyblue;
 }
 
 .sec h2 {
-    font-size: 3em;
+    font-size: 2em;
     color: black;
     margin-bottom: 10px;
 }
+
 .sec p {
     font-size: 1em;
     color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    #header {
+        padding: 20px 40px;
+    }
+
+    #header ul {
+        gap: 30px;
+    }
+
+    #txt {
+        font-size: 5em;
+        left: -100px;
+    }
+    
+    #subtxt {
+        font-size: 1.3em;
+    }
+    
+    .sec {
+        padding: 40px;
+    }
+    
+    .sec h2 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        padding: 15px 30px;
+    }
+
+    #header ul {
+        gap: 20px;
+    }
+
+    #txt {
+        font-size: 4em;
+        left: -80px;
+    }
+    
+    #subtxt {
+        font-size: 1.2em;
+    }
+    
+    .sec {
+        padding: 30px;
+    }
+    
+    .sec h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    #header ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #txt {
+        font-size: 3em;
+        left: -60px;
+    }
+    
+    #subtxt {
+        font-size: 1em;
+    }
+    
+    .sec {
+        padding: 20px;
+    }
+    
+    .sec h2 {
+        font-size: 1.5em;
+    }
 }
